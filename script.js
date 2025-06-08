@@ -1,5 +1,5 @@
 // Set your event time in UTC (equivalent of June 28, 2025, 10:30 PM PST)
-const eventDate = new Date("2025-06-29T06:30:00Z");
+const eventDate = new Date("2025-06-29T05:30:00Z");
 
 function updateTimer() {
   const now = new Date();
