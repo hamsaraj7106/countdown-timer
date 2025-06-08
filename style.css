@@ -1,0 +1,29 @@
+body {
+  background: #0f2027;  /* fallback for old browsers */
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+#timer {
+  font-size: 3rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#eventTime {
+  font-size: 1rem;
+  color: #ccc;
+}
