@@ -1,4 +1,4 @@
-// Set your event time in UTC (equivalent of June 28, 2025, 10:30 PM PST)
+// Set event time: June 28, 2025 at 10:30 PM PDT = 2025-06-29T05:30:00Z
 const eventDate = new Date("2025-06-29T05:30:00Z");
 
 function updateTimer() {
@@ -20,9 +20,22 @@ function updateTimer() {
     `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
-// Show event time in both UTC and local timezone
+// Format as: June 28, 2025 at 10:30 PM PDT
+function formatDateWithTimezone(date) {
+  return date.toLocaleString("en-US", {
+    timeZoneName: "short",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  });
+}
+
+// Update the event time display
 document.getElementById("eventTime").innerHTML =
-  `Event Time:<br>🕒 UTC: ${eventDate.toUTCString()}<br>🕒 Your Time: ${eventDate.toLocaleString()}`;
+  `🕒 Event Time: ${formatDateWithTimezone(eventDate)}`;
 
 const timerInterval = setInterval(updateTimer, 1000);
 updateTimer();  // call once initially
